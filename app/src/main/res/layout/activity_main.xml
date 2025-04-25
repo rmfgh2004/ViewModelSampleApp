@@ -21,7 +21,7 @@
             android:id="@+id/countTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="count : 0"
+            android:text="Count : 3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +32,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="count : 0"
-            android:text='@{"count : " + viewmodel.count}'
+            setCountText="@{viewmodel.count}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/countTextView" />
+
+        <TextView
+            android:id="@+id/plusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:firstNumber="@{3}"
+            app:secondNumber="@{viewmodel.count}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/testCountTextView"
+            />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingButton"

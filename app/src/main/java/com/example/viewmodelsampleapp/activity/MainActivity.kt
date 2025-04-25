@@ -1,12 +1,9 @@
 package com.example.viewmodelsampleapp.activity
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.example.viewmodelsampleapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.count.observe(this) { count ->
-            binding.countTextView.text = "count : $count"
+            binding.countTextView.setText("Count : $count")
         }
     }
 }
